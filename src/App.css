@@ -1,60 +1,56 @@
-main {
-  display: block;
-  justify-content: center;
+.app-container {
+  padding: 0 1rem;
+  max-width: 520px;
+  margin: 2rem auto;
+  font-family: Arial, sans-serif;
+}
+
+.app-title {
+  color: #008037;
   text-align: center;
-  font-size: 10px;
-  margin: 100px;
-  padding: 100px;
+  margin-bottom: 1rem;
 }
 
-p {
-  font-size: 15px;
-  color: #ffffff;
-}
-
-.footer {
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  background-color: rgb(255, 255, 255);
-  padding: 40px 20px;
-}
-
-.footer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-
+.form-contacto {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
-
-  font-size: 14px;
-  color: #3dc8ff;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
-.footer-links {
+.form-contacto input {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.form-contacto button {
+  background: #008037;
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tarjeta-contacto {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  margin-bottom: 10px;
+}
+
+.btn-eliminar {
+  background: #c62828;
+  color: white;
+  border: 0;
+  padding: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.acciones {
   display: flex;
-  gap: 24px;
-}
-
-.footer-links a {
-  color: #3dc8ff;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-  color: #00415d;
-}
-
-/* -------- RESPONSIVE -------- */
-@media (min-width: 768px) {
-  .footer-container {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-
-#copyright {
-  color: #3dc8ff;
-  font-size: 14px;
+  justify-content: flex-end;
 }

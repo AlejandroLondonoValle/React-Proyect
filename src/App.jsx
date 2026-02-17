@@ -1,43 +1,49 @@
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import ContactoCard from "./components/contactoCard";
+import FormularioContacto from "./components/formularioContacto";
 
 export default function App() {
 
+  const [contactos, setContactos] = useState([
+    {
+      id: 1,
+      nombre: "Carolina Pérez",
+      telefono: "300 123 4567",
+      correo: "carolina@sena.edu.co",
+      etiqueta: "Compañera",
+    },
+  ]);
+
+  const agregarContacto = (nuevo) => {
+    setContactos((prev) => [...prev, { id: Date.now(), ...nuevo }]);
+  };
+
+  const eliminarContacto = (id) => {
+    setContactos((prev) => prev.filter((c) => c.id !== id));
+  };
+
   return (
-    <>
-    <main>
-      <h1>¡Hola, Mi nombre es Luis Alejandro Londoño Valle!</h1>
-      <hr />
-      <p>Soy un joven de 19 años con conocimientos en C# y .NET, y un marcado interés en especializarme en desarrollo de software. Actualmente curso Tecnología en Análisis y Desarrollo de Software en el SENA y Ingeniería de Software en el Tecnológico de Antioquia, con el objetivo de adquirir continuamente nuevos conocimientos y experiencias que me permitan crecer en el ámbito tecnológico. Me caracterizo por ser una persona solidaria, trabajadora y responsable, comprometida con la búsqueda constante de oportunidades para mejorar mis habilidades y contribuir de manera significativa en proyectos innovadores.</p>
+    <main className="app-container">
+
+      <h1 className="app-title">Agenda ADSO 📒</h1>
+
+      <FormularioContacto onAgregar={agregarContacto} />
+
+      <p className="app-subtitle">Contactos guardados</p>
+
+      {contactos.map((c) => (
+        <ContactoCard
+          key={c.id}
+          id={c.id}
+          nombre={c.nombre}
+          telefono={c.telefono}
+          correo={c.correo}
+          etiqueta={c.etiqueta}
+          onDelete={eliminarContacto}
+        />
+      ))}
+
     </main>
-    
-    <footer className="footer">
-        <div className="footer-container">
-          <p id="copyright">© 2025 Luis Alejandro Londoño Valle · Construyendo backends impecables</p>
-
-          <div className="footer-links">
-            <a
-              href="https://github.com/AlejandroLondonoValle"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://co.linkedin.com/in/lu%C3%ADs-alejandro-londo%C3%B1o-valle"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LinkedIn
-            </a>
-            <a href="mailto:londonovalleluisalejandro@gmail.com">
-              Email
-            </a>
-          </div>
-        </div>
-      </footer>
-
-    </>
-
   );
 }
-
