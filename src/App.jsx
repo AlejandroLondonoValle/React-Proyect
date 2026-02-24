@@ -23,9 +23,12 @@ export default function App() {
 
   return (
     <main className="max-w-2xl mx-auto mt-10 p-4">
-      <h1 className="text-3xl font-bold text-morado text-center mb-2">Agenda ADSO v3</h1>
+      <h1 className="text-3xl font-bold text-morado text-center mb-2">Agenda Programa |ADSO| - v4</h1>
+      <h3 className="bg-morado text-white text-xs rounded text-center mb-2 px-2 py-1 w-fit">
+        Analisis y Desarrollo de Software
+      </h3>
       <p className="text-gray-500 text-center mb-6">
-        Interfaz moderna con TailwindCSS
+        Interfaz moderna con TailwindCSS para la organizacion de contactos
       </p>
 
       <FormularioContacto onAgregar={agregarContacto} />
