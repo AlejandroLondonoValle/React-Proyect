@@ -1,0 +1,18 @@
+{
+  "contactos": [
+    {
+      "id": "b0f3",
+      "nombre": "Luis Alejandro Londoño Valle",
+      "telefono": "343434",
+      "correo": "londonovalleluisalejandro@gmail.com",
+      "etiqueta": "Estudiante"
+    },
+    {
+      "id": "e6cd",
+      "nombre": "Gustavo Bolaños",
+      "telefono": "343434",
+      "correo": "gustavobola@gmail.com",
+      "etiqueta": "Instructor"
+    }
+  ]
+}
