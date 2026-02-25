@@ -4,8 +4,8 @@ import {
   crearContacto,
   eliminarContactoPorId,
 } from "./app";
-import FormularioContacto from "./components/FormularioContacto";
-import ContactoCard from "./components/ContactoCard";
+import FormularioContacto from "./components/formularioContacto";
+import ContactoCard from "./components/contactoCard";
 
 export default function App() {
   // Estado principal de la app
