@@ -1,20 +1,20 @@
 {
   "contactos": [
     {
-      "id": "0d3d",
-      "nombre": "Luis Alejandro Londoño Valle",
+      "id": "fd26",
+      "nombre": "Luis Alejandro",
       "telefono": "343434",
       "correo": "londonovalleluisalejandro@gmail.com",
       "empresa": "Bancolombia",
-      "etiqueta": "Estudiante"
+      "etiqueta": "43434"
     },
     {
-      "id": "917f",
-      "nombre": "Juan Esteban Zapata",
+      "id": "4095",
+      "nombre": "Luis Alejandro",
       "telefono": "343434",
-      "correo": "estebanzapata@example.com",
+      "correo": "londonovalleluisalejandro@gmail.com",
       "empresa": "Postobon",
-      "etiqueta": "Estudiante"
+      "etiqueta": "43434"
     }
   ]
 }
