@@ -1,3 +1,14 @@
+// Archivo: src/App.jsx
+// Componente principal de la aplicación Agenda ADSO.
+// Se encarga de:
+// - Cargar la lista de contactos desde la API.
+// - Manejar estados globales (contactos, carga, error).
+// - Conectar el formulario y las tarjetas de contactos.
+
+
+// Importamos la configuración global de la aplicación
+import { APP_INFO } from "./config";
+
 // Importamos la libreria de Sweetalert2
 import Swal from "sweetalert2";
 
@@ -120,16 +131,15 @@ function App() {
         {/* Header */}
         <header className="mb-8">
           <p className="text-xs tracking-[0.3em] text-gray-500 uppercase">
-            Desarrollo Web ReactJS Ficha 3223876
+            Desarrollo Web ReactJS Ficha {APP_INFO.ficha}
           </p>
 
           <h1 className="text-4xl font-extrabold text-gray-900 mt-2">
-            Agenda ADSO v6
+            {APP_INFO.titulo}
           </h1>
 
           <p className="text-sm text-gray-600 mt-1">
-            Gestión de contactos conectada a una API local con JSON Server,
-            ahora con validaciones y mejor experiencia de usuario.
+            {APP_INFO.subtitulo}
           </p>
         </header>
 
