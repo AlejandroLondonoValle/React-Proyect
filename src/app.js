@@ -30,6 +30,23 @@ export async function crearContacto(data) {
     return res.json();
 }
 
+// actualizar contacto
+export const actualizarContacto = async (id, data) => {
+    const response = await fetch(`${API_BASE_URL}/${id}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+        throw new Error("Error al actualizar");
+    }
+
+    return await response.json(); // 🔥 ESTO ES LO QUE FALTABA
+};
+
 // DELETE: eliminar contacto por id
 export async function eliminarContactoPorId(id) {
     const res = await fetch(`${API_BASE_URL}/${id}`, {
