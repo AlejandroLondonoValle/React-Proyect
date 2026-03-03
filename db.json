@@ -39,6 +39,14 @@
       "correo": "estebanzapata@example.com",
       "empresa": "232323",
       "etiqueta": "Estudiante"
+    },
+    {
+      "id": "9df6",
+      "nombre": "Luis Alejandro",
+      "telefono": "343434",
+      "correo": "londonovalleluisalejandro@gmail.com",
+      "empresa": "Bancolombia",
+      "etiqueta": "43434"
     }
   ]
 }
