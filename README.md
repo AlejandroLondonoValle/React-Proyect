@@ -24,17 +24,17 @@ Permite **crear, listar, buscar, ordenar, actualizar y eliminar contactos** con 
 
 # 🚀 Características principales
 
-✅ Crear contactos
-✅ Listar contactos desde una API
-✅ Actualizar información de contactos
-✅ Eliminar contactos con confirmación
-✅ Buscador por nombre, correo o etiqueta
-✅ Ordenamiento alfabético A-Z / Z-A
-✅ Validaciones en el formulario
-✅ Alertas visuales con SweetAlert2
-✅ Interfaz moderna con TailwindCSS
-✅ Modal de edición de contacto
-✅ Manejo de estados con React Hooks
+- ✅ Crear contactos
+- ✅ Listar contactos desde una API
+- ✅ Actualizar información de contactos
+- ✅ Eliminar contactos con confirmación
+- ✅ Buscador por nombre, correo o etiqueta
+- ✅ Ordenamiento alfabético A-Z / Z-A
+- ✅ Validaciones en el formulario
+- ✅ Alertas visuales con SweetAlert2
+- ✅ Interfaz moderna con TailwindCSS
+- ✅ Modal de edición de contacto
+- ✅ Manejo de estados con React Hooks
 
 ---
 
