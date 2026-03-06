@@ -1,11 +1,11 @@
 {
   "contactos": [
     {
-      "nombre": "Alejandro Londoño",
+      "nombre": "Alejandro Londoño Valle",
       "telefono": "3146793244",
-      "correo": "londonovalleluisalejandro@gmail.com",
-      "empresa": "Bancolombia",
-      "etiqueta": "CEO",
+      "correo": "londonoalejandro@example.com",
+      "empresa": "Sena",
+      "etiqueta": "Estudiante",
       "id": "fd26"
     },
     {
@@ -17,20 +17,20 @@
       "etiqueta": "Estudiante"
     },
     {
-      "id": "b0c8",
-      "nombre": "Fabian Hernandez",
+      "nombre": "Fabian Hernandez Valencia",
       "telefono": "2323232",
       "correo": "yeisonalejandroz@gmail.com",
       "empresa": "BruteKali Security",
-      "etiqueta": "Estudiante"
+      "etiqueta": "Otaku y Therian enclosetado",
+      "id": "b0c8"
     },
     {
-      "id": "1efa",
       "nombre": "Yeison Alejandro Zapata",
       "telefono": "32324214",
       "correo": "yeisonalejandroz@gmail.com",
-      "empresa": "Postobon",
-      "etiqueta": "Estudiante"
+      "empresa": "Bloque 8 de la minorista",
+      "etiqueta": "Jesucristo de la Minorista",
+      "id": "1efa"
     },
     {
       "id": "3a68",

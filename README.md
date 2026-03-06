@@ -1,227 +1,269 @@
-# 📘 Ejercicios de JavaScript – Funciones, Arrays y Métodos
 
-Este repositorio contiene una serie de **ejercicios prácticos en JavaScript** orientados a reforzar conceptos fundamentales como:
+<p align="center">
+  <img src="public/agenda.svg" width="200">
+</p>
 
-* Variables y constantes
-* Operadores aritméticos y lógicos
-* Uso de arrays de objetos
-* Métodos de arrays (`map`, `filter`, `reduce`, `find`, `sort`)
-* Funciones tradicionales y funciones flecha
-* Desestructuración de objetos
-* Buenas prácticas de lectura y organización del código
 
-Todos los ejercicios están desarrollados en un solo archivo llamado **`Ejercicios.js`** y se ejecutan directamente desde consola.
+<h1 align="center">Agenda ADSO</h1>
 
----
 
-## 🧑‍🎓 Integrantes del grupo
+Aplicación web desarrollada con **React + Vite + TailwindCSS** para la gestión de contactos conectada a una **API REST local mediante JSON Server**.
+Permite **crear, listar, buscar, ordenar, actualizar y eliminar contactos** con una interfaz moderna y validaciones en el formulario.
 
-* **Fabian Ricardo Hernandez Valencia**
-* **Juan Esteban Isaza Gomez**
-* **Luis Alejandro Londoño Valle**
-* **Yeison Alejandro Zapata Gomez**
+🌐 **Demo en producción**
+👉 [https://adsoagenda.netlify.app/](https://adsoagenda.netlify.app/)
 
 ---
 
-## 📂 Estructura del archivo
+# 📸 Vista de la aplicación
 
-El archivo `Ejercicios.js` está dividido por secciones, cada una representando un ejercicio independiente. A continuación se explica **detalladamente qué hace cada bloque y cada función**.
-
----
-
-## 🧮 Ejercicio 1 – Cálculo de promedio y estado del aprendiz
-
-### 📌 Descripción
-
-En este ejercicio se definen los datos básicos de un aprendiz y se calcula el promedio de tres notas para determinar si aprueba o no.
-
-### 🔍 ¿Qué hace el código?
-
-* Se declaran constantes con:
-
-  * Nombre del aprendiz
-  * Cédula
-  * Ficha
-  * Tres notas
-* Se calcula el **promedio** sumando las notas y dividiéndolas entre 3.
-* Se evalúa si el promedio es mayor o igual a `3.0`.
-* Se imprime en consola un reporte estructurado con toda la información.
-
-### 🧠 Conceptos usados
-
-* Operadores aritméticos
-* Operador ternario (`? :`)
-* Método `toFixed()` para limitar decimales
-* Plantillas de texto (template literals)
+![alt text](/src/images/image.png)
+![alt text](/src/images/image-1.png)
 
 ---
 
-## 👥 Ejercicio 2 – Análisis grupal de aprendices
+# 🚀 Características principales
 
-### 📌 Descripción
+✅ Crear contactos
+✅ Listar contactos desde una API
+✅ Actualizar información de contactos
+✅ Eliminar contactos con confirmación
+✅ Buscador por nombre, correo o etiqueta
+✅ Ordenamiento alfabético A-Z / Z-A
+✅ Validaciones en el formulario
+✅ Alertas visuales con SweetAlert2
+✅ Interfaz moderna con TailwindCSS
+✅ Modal de edición de contacto
+✅ Manejo de estados con React Hooks
 
-Se trabaja con un **array de objetos** que representa un grupo de aprendices con su nombre y nota.
+---
 
-### 🔍 Funcionalidades
+# 🛠️ Tecnologías utilizadas
 
-#### ✅ Filtrar aprobados
+| Tecnología  | Uso                          |
+| ----------- | ---------------------------- |
+| React       | Librería principal de UI     |
+| Vite        | Entorno de desarrollo rápido |
+| TailwindCSS | Estilos y diseño             |
+| JSON Server | Simulación de API REST       |
+| SweetAlert2 | Alertas visuales             |
+| Netlify     | Despliegue de la aplicación  |
 
-```js
-aprendices.filter(a => a.nota >= 3.0)
+---
+
+# 📂 Estructura del proyecto
+
+```
+AGENDA-ADSO
+│
+├── dist
+├── node_modules
+├── public
+│
+├── src
+│   ├── assets
+│   ├── components
+│   │   ├── contactoCard.jsx
+│   │   └── formularioContacto.jsx
+│   │
+│   ├── modules
+│   ├── pages
+│   │
+│   ├── App.jsx
+│   ├── app.js
+│   ├── config.js
+│   ├── main.jsx
+│   ├── App.css
+│   └── index.css
+│
+├── db.json
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
 
-* Devuelve un nuevo arreglo con solo los aprendices aprobados.
-* Se imprime la cantidad total de aprobados.
+---
 
-#### 📊 Calcular promedio grupal
+# ⚙️ Instalación y ejecución
 
-```js
-aprendices.reduce((sum, a) => sum + a.nota, 0)
+### 1️⃣ Clonar el repositorio
+
+```bash
+git clone https://github.com/AlejandroLondonoValle/React-Proyect.git
 ```
 
-* Suma todas las notas del grupo.
-* Luego se divide entre el número total de aprendices.
+Entrar al proyecto:
 
-#### 📝 Obtener nombres
-
-```js
-aprendices.map(a => a.nombre)
+```bash
+cd agenda-adso
 ```
 
-* Extrae solo los nombres de los aprendices.
-* Se muestran en consola separados por coma.
-
-### 🧠 Conceptos usados
-
-* `filter`
-* `reduce`
-* `map`
-* Arrays de objetos
-
 ---
 
-## 📇 Ejercicio 3 – Creación y manejo de contactos
+### 2️⃣ Instalar dependencias
 
-### 📌 Descripción
-
-Se implementa una función que crea objetos de contacto de forma dinámica.
-
-### 🛠 Función `crearContacto(nombre, telefono)`
-
-```js
-const crearContacto = (nombre, telefono) => ({ ... })
+```bash
+npm install
 ```
 
-#### ¿Qué hace?
+---
 
-* Genera un objeto contacto con:
+### 3️⃣ Iniciar JSON Server
 
-  * `id` único usando `Date.now()`
-  * Nombre
-  * Teléfono
-  * Fecha de creación
+Este proyecto utiliza **JSON Server como backend local**.
 
-Se crean cuatro contactos y se imprimen en consola.
-
-### 🔓 Desestructuración
-
-```js
-const { nombre, telefono } = contacto1;
+```bash
+npx json-server --watch db.json --port 3005
 ```
 
-* Permite extraer propiedades del objeto directamente en variables.
-* Se usa para mostrar la información de cada contacto de forma clara.
+La API quedará disponible en:
 
-### 🧠 Conceptos usados
-
-* Funciones flecha
-* Objetos
-* Desestructuración
-* Fechas en JavaScript
+```
+http://localhost:3005/contactos
+```
 
 ---
 
-## 🎓 Ejercicio 4 – Gestión de aprendices con funciones
+### 4️⃣ Ejecutar la aplicación
 
-Se trabaja con un arreglo más completo de aprendices (`id`, `nombre`, `ficha`, `nota`).
+```bash
+npm run dev
+```
 
-### ✅ Función `obtenerAprobados(aprendices)`
+Abrir en el navegador:
 
-* Retorna solo los aprendices con nota mayor o igual a `3.0`.
-* Usa el método `filter`.
-
----
-
-### 📊 Función `calcularPromedio(aprendices)`
-
-* Suma todas las notas usando `reduce`.
-* Divide el total entre la cantidad de aprendices.
-* Retorna el promedio general.
+```
+http://localhost:5173
+```
 
 ---
 
-### 🔍 Función `buscarPorNombre(aprendices, nombre)`
+# 🔌 API utilizada
 
-* Busca un aprendiz por su nombre exacto.
-* Usa el método `find`.
-* Retorna el primer objeto que coincida.
+La aplicación consume una API REST simulada mediante **JSON Server**.
 
----
+### Base URL
 
-### 📝 Función `obtenerNombres(aprendices)`
-
-* Devuelve un arreglo con solo los nombres.
-* Usa `map` para transformar el array original.
+```
+http://localhost:3005/contactos
+```
 
 ---
 
-## 🛒 Ejercicio 5 – Gestión de productos e inventario
+### Endpoints
 
-Se trabaja con un arreglo de productos que contienen:
-
-* Nombre
-* Precio
-* Stock
-
----
-
-### 📦 Función `obtenerDisponibles()`
-
-* Filtra los productos que tienen stock mayor a 0.
-* Ideal para mostrar productos disponibles para venta.
+| Método | Endpoint         | Descripción         |
+| ------ | ---------------- | ------------------- |
+| GET    | `/contactos`     | Listar contactos    |
+| POST   | `/contactos`     | Crear contacto      |
+| PUT    | `/contactos/:id` | Actualizar contacto |
+| DELETE | `/contactos/:id` | Eliminar contacto   |
 
 ---
 
-### 💰 Función `calcularInventario()`
+# 🧠 Funcionalidades implementadas
 
-* Calcula el valor total del inventario.
-* Suma los precios de todos los productos usando `reduce`.
+### 📌 Gestión de contactos
 
----
+* Creación de nuevos contactos
+* Actualización mediante modal
+* Eliminación con confirmación
+* Listado dinámico desde API
 
-### 🔻 Función `aplicarDescuento()`
+### 🔎 Buscador inteligente
 
-* Aplica un **10% de descuento** a cada producto.
-* Retorna un nuevo arreglo sin modificar el original.
-* Usa el operador spread (`...`).
+Permite buscar contactos por:
 
----
-
-### 📉 Función `ordenarPorPrecio()`
-
-* Ordena los productos de mayor a menor precio.
-* Utiliza el método `sort`.
-
-⚠️ Nota: `sort` modifica el arreglo original.
+* nombre
+* correo
+* etiqueta
 
 ---
 
-## 🚀 Conclusión
+### 🔃 Ordenamiento
 
-Este conjunto de ejercicios demuestra el uso práctico de **JavaScript moderno**, enfocándose en el manejo de datos reales mediante funciones limpias y reutilizables.
+Se puede ordenar:
 
-Es una base sólida para comprender cómo trabajar con información en aplicaciones reales, tanto en frontend como backend.
+* A → Z
+* Z → A
 
 ---
 
-💻 *Desarrollado como ejercicio académico en JavaScript de ADSO*
+### ✔ Validaciones
+
+El formulario valida:
+
+* nombre obligatorio
+* teléfono obligatorio
+* correo obligatorio
+* correo debe contener `@`
+
+---
+
+# 🎨 Interfaz
+
+La interfaz fue diseñada con **TailwindCSS** buscando:
+
+* Diseño limpio
+* Componentes reutilizables
+* Buena experiencia de usuario
+* Layout responsive
+
+---
+
+# 🌐 Despliegue
+
+La aplicación está desplegada en **Netlify**.
+
+🔗 [https://adsoagenda.netlify.app/](https://adsoagenda.netlify.app/)
+
+---
+
+# 📚 Configuración centralizada
+
+Archivo:
+
+```
+src/config.js
+```
+
+Permite modificar fácilmente:
+
+```javascript
+export const API_BASE_URL = "http://localhost:3005/contactos";
+
+export const APP_INFO = {
+  ficha: "3223876",
+  titulo: "Agenda ADSO v8",
+  subtitulo:
+    "Gestión de contactos conectada a una API local con JSON Server",
+};
+```
+
+---
+
+# 👨‍💻 Autor
+Luis Alejandro Londoño Valle
+**Aprendiz ADSO**
+Ficha: **3223876**
+
+Proyecto académico del programa:
+
+**Análisis y Desarrollo de Software – SENA**
+
+---
+
+# 👨‍🏫 Instructor
+
+**Gustavo Adolfo Bolaños Dorado**
+
+---
+
+# 📜 Licencia
+
+Proyecto desarrollado con fines **educativos y de aprendizaje**.
+
+---
+
