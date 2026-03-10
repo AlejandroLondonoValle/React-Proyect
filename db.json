@@ -1,52 +1,20 @@
 {
   "contactos": [
     {
-      "nombre": "Alejandro Londoño Valle",
-      "telefono": "3146793244",
-      "correo": "londonoalejandro@example.com",
-      "empresa": "Sena",
-      "etiqueta": "Estudiante",
-      "id": "fd26"
-    },
-    {
-      "id": "961c",
-      "nombre": "Luis Alejandro Londoño Valle",
-      "telefono": "2323232",
-      "correo": "estebanzapata@example.com",
-      "empresa": "Postobon",
-      "etiqueta": "Estudiante"
-    },
-    {
-      "nombre": "Fabian Hernandez Valencia",
-      "telefono": "2323232",
-      "correo": "yeisonalejandroz@gmail.com",
-      "empresa": "BruteKali Security",
-      "etiqueta": "Otaku y Therian enclosetado",
-      "id": "b0c8"
-    },
-    {
       "nombre": "Yeison Alejandro Zapata",
-      "telefono": "32324214",
-      "correo": "yeisonalejandroz@gmail.com",
-      "empresa": "Bloque 8 de la minorista",
-      "etiqueta": "Jesucristo de la Minorista",
-      "id": "1efa"
+      "telefono": "32424141",
+      "correo": "yeisonalejandro@gmail.com",
+      "empresa": "Redinet",
+      "etiqueta": "Estudiantes",
+      "id": "5f16"
     },
     {
-      "id": "3a68",
-      "nombre": "Juan Esteban Zapata",
-      "telefono": "343434",
-      "correo": "estebanzapata@example.com",
-      "empresa": "232323",
-      "etiqueta": "Estudiante"
-    },
-    {
-      "id": "9df6",
       "nombre": "Luis Alejandro",
       "telefono": "343434",
       "correo": "londonovalleluisalejandro@gmail.com",
       "empresa": "Bancolombia",
-      "etiqueta": "43434"
+      "etiqueta": "Estudiante",
+      "id": "239d"
     }
   ]
 }
