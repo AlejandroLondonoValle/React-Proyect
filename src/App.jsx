@@ -4,6 +4,8 @@
 import { APP_INFO } from "./config";
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
+import { useAuth } from "./context/AuthContext";
+
 
 import {
   listarContactos,
@@ -37,6 +39,8 @@ function App() {
     empresa: "",
     etiqueta: "",
   });
+
+  const { logout } = useAuth();
 
   // Cargar contactos
   useEffect(() => {
@@ -244,7 +248,7 @@ function App() {
           <div className="flex items-center gap-3">
 
             <div className="h-9 w-9 rounded-2xl bg-purple-600 flex items-center justify-center text-white font-bold">
-              A
+              <img src="" alt="" />
             </div>
 
             <div>
@@ -261,15 +265,26 @@ function App() {
 
           </div>
 
-          <div className="text-right">
+          <div className="flex items-center gap-3">
 
-            <p className="text-xs text-slate-400">
-              SENA CTMA
-            </p>
+            <div className="text-right">
 
-            <p className="text-xs text-slate-200">
-              Ficha {APP_INFO.ficha}
-            </p>
+              <p className="text-xs text-slate-400">
+                SENA CTMA
+              </p>
+
+              <p className="text-xs text-slate-200">
+                Ficha {APP_INFO.ficha}
+              </p>
+
+            </div>
+
+            <button
+              onClick={logout}
+              className="px-4 py-2 rounded-xl bg-red-600 text-white text-sm hover:bg-red-700 transition"
+            >
+              Cerrar sesión
+            </button>
 
           </div>
 
